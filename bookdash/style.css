@@ -335,11 +335,15 @@ figcaption {
 
 /* --------------- FORMS */
 
+input, textarea {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: initial;
+	color: #555555;
+}
+
 input.search-field, input#mc4wp_email {
 	padding: 0.05em 0.2em 0.05em 0.2em;
 	margin: 0 0 0 -0.03em;
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: initial;
 	font-weight: 300;
 	width: 10em;
 	border: 1px solid white;
