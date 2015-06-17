@@ -262,6 +262,16 @@ a.go-top-button:hover {
 	opacity: 1;
 }
 
+/* -------------- SPECIAL DIVS */
+
+.box {
+	border: 1px solid #D0CfB3;
+	box-shadow: 3px 3px 10px #D0CfB3;
+	margin: 0 2em 0 0;
+	padding: 0 0.5em;
+	background-color: #D0CfB3;
+}
+
 /* -------------- TABLES */
 
 table {
