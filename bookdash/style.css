@@ -136,11 +136,9 @@ body {
 .sidebar .supporters-sidebar {
 	font-family: "Crimson Text", serif;
 	font-style: italic;
-	font-size: 120%;
 	color: grey;
 	line-height: 120%;
-	text-align: center;
-	margin: 1em 0;
+	margin: 3em 0 1em 0;
 }
 .sidebar .supporters img {
 	margin: 0.5em;
