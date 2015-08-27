@@ -267,7 +267,7 @@ add_filter( 'wp_title', 'bookdash_wp_title', 10, 2 );
 /**
  * Add an image size that suits our theme
  */
-add_image_size( 'post-width', 530, 400 ); // 600 pixels wide by 400 pixels tall, soft proportional crop mode
+add_image_size( 'post-width', 530, 530 ); // Up to 530 pixels wide or 530 pixels tall, soft proportional crop mode
  /*And add it to the admin size chooser */ 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
