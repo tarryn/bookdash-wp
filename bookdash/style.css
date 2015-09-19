@@ -197,7 +197,7 @@ li {
 }
 strong {
 	font-weight: 600;
-	line-height: inherit;
+	line-height: 100%;
 }
 em {
 	line-height: 100%;
