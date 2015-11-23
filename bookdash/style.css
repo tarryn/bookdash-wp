@@ -340,12 +340,15 @@ input, textarea {
 	color: #555555;
 }
 
+/* Mailchimp */
+
 input.search-field, input#mc4wp_email {
 	padding: 0.05em 0.2em 0.05em 0.2em;
-	margin: 0 0 0 -0.03em;
+	margin: 0.2em 0 0 -0.03em;
 	font-weight: 300;
 	width: 10em;
 	border: 1px solid white;
+	float: left;
 }
 input.search-field:focus, input.search-field:hover, 
 input#mc4wp_email:focus, input#mc4wp_email:hover {
@@ -353,12 +356,21 @@ input#mc4wp_email:focus, input#mc4wp_email:hover {
 	border-radius: 0.2em;
 }
 #mc4wp-form-1:focus:after, #mc4wp-form-1:hover:after {
-	content: "To subscribe, type your email and hit enter";
+	content: "To subscribe, type your email and hit subscribe";
 	font-family: "Source Sans Pro", Helvetica, Arial;
 	font-size: initial;
 	font-style: initial;
 	margin-top: -1em;
+	line-height: 110%;
+	max-width: 10em;
 }
+.mc4wp-form input[type=submit] {
+    float: right;
+    padding: 0.2em;
+    background-color: silver;
+}
+
+/* PayPal */
 form.paypal {
 	line-height: 0;
 }
