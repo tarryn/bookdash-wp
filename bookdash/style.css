@@ -197,10 +197,10 @@ li {
 }
 strong {
 	font-weight: 600;
-	line-height: 100%;
+	line-height: inherit;
 }
 em {
-	line-height: 100%;
+	line-height: inherit;
 }
 a img { 
 	border: none;
