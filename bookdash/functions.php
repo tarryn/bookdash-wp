@@ -304,3 +304,22 @@ function sc_taglist(){
     return get_the_tag_list('<span class="tag-list-before"></span>',', ','');
 }
 add_shortcode('tags', 'sc_taglist');
+
+/**
+ * Add a [languages] shortcode to display a post's categories.
+ * If the post is in 'Books', i.e. it's a book, this will display.
+ * It'll list the subcategories of 'Book', which should only be languages.
+ */
+
+function languages( $atts, $content = null ) {
+   if ( in_category('books') ) {
+      global $post;
+         $categories = wp_list_categories( array(
+            'child_of'            => '6',
+            'title_li'            => __( '' ),
+            'echo'                => false,
+         ) );
+      echo '<ul class="language-list">' . $categories . '</ul>';
+   }
+}
+add_shortcode("languages", "languages");
