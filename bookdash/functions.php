@@ -306,7 +306,7 @@ function sc_taglist(){
 add_shortcode('tags', 'sc_taglist');
 
 /**
- * Add a [languages] shortcode to display a post's categories.
+ * Add a [languages] shortcode to display subcategories of 'Books'.
  * If the post is in 'Books', i.e. it's a book, this will display.
  * It'll list the subcategories of 'Book', which should only be languages.
  */
@@ -323,3 +323,28 @@ function languages( $atts, $content = null ) {
    }
 }
 add_shortcode("languages", "languages");
+
+/**
+ * Add a [languages_available] shortcode to display subcategories of 'Books'
+ * for the current post. Will show if the post is in 'Books' (if cat ID 6).
+ * Will not link to the archive pages (that would be misleading).
+ */
+
+function languages_available( $atts, $content = null ) {
+
+    $post_id = get_the_ID();
+    $post_categories = wp_get_post_categories( $post_id );
+
+    if ( in_category('books') ) {
+        global $post;
+            $categories = wp_list_categories( array(
+                'child_of'      => '6',
+                'title_li'      => __( '' ),
+                'echo'          => false,
+                'include'       => $post_categories
+            ) );
+        $categories_nolinks = preg_replace('#<a.*?>([^<]*)</a>#i', '$1', $categories);
+        return '<div class="language-list"><p>Available in:</p><ul>' . $categories_nolinks . '</ul></div';
+    }
+}
+add_shortcode("languages-available", "languages_available");
