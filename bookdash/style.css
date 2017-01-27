@@ -83,7 +83,7 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 300;
 	font-size: 80%;
-	color: silver;
+	color: grey;
 	width: 280px;
 	padding: 2em 1em 2em 3em;
 }
@@ -105,12 +105,13 @@ body {
 	margin: 1.5em 0 1em 0;
 	border: none;
 	padding: 0;
-	margin: 1.5em 0 1em 0;
-	font-family: source sans pro;
+	margin: 2em 0 1em 0;
+	font-family: "Source Sans Pro", Helvetica, Arial;
 	font-style: normal;
 	font-size: initial;
-	font-weight: "Source Sans Pro", Helvetica, Arial;
 	text-align: initial;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
 }
 .sidebar ul {
 	list-style-type: none;
@@ -124,7 +125,8 @@ body {
 	width: 100%;
 }
 .social-media-buttons {
-	margin: 0.5em 0 0 0;
+	clear: both;
+	padding-top: 1em;
 }
 .social-media-buttons a, .social-media-buttons a:link, .social-media-buttons a:visited {
 	margin: 0 0.3em 0 0.3em;
@@ -133,6 +135,32 @@ body {
 .social-media-buttons a:hover {
 	color: #0089bc;
 }
+.sidebar .textwidget:empty {
+	display: none;
+}
+.sidebar .textwidget img {
+	width: 100px;
+}
+
+/* Tag lists in sidebar created with [tags] shortcode */
+.sidebar span.tag-list-before:before {
+    content: "See more about";
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 2em 0 0.5em 0;
+}
+
+/* Category lists in sidebar created with [languages] shortcode */
+.sidebar ul.language-list:before {
+    content: "See all books in";
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 2em 0 0.5em 0;
+}
+
+/* Not currently in use 
 .sidebar .supporters-sidebar {
 	font-family: "Crimson Text", serif;
 	font-style: italic;
@@ -143,9 +171,7 @@ body {
 .sidebar .supporters img {
 	margin: 0.5em;
 }
-.sidebar .textwidget img {
-	width: 100px;
-}
+*/
 
 /* -------------- TEXT ELEMENTS */
 
@@ -197,10 +223,10 @@ li {
 }
 strong {
 	font-weight: 600;
-	line-height: 100%;
+	line-height: inherit;
 }
 em {
-	line-height: 100%;
+	line-height: inherit;
 }
 a img { 
 	border: none;
@@ -264,10 +290,23 @@ a.go-top-button:hover {
 
 .box {
 	border: 1px solid #D0CfB3;
-	box-shadow: 3px 3px 10px #D0CfB3;
+	border-radius: 0.2em;
 	margin: 0 2em 0 0;
 	padding: 0 0.5em;
-	background-color: #D0CfB3;
+}
+
+.post-tags {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 1em 2em 2em 0;
+    padding: 0.2em 0;
+    font-size: 0.7em;
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.post-tags:empty {
+	display: none;
 }
 
 /* -------------- TABLES */
@@ -369,6 +408,22 @@ input#mc4wp_email:focus, input#mc4wp_email:hover {
     padding: 0.2em;
     background-color: silver;
 }
+
+
+/* Mailchimp subscribe form */
+
+div#mc_embed_signup_scroll ul {
+    list-style-type: none;
+    padding: 0;
+}
+label[for="mce-EMAIL"], label[for="mce-FNAME"], label[for="mce-LNAME"] {
+    width: 25%;
+    display: inline-block;
+}
+input#mce-EMAIL, input#mce-FNAME, input#mce-LNAME {
+    width: 60%;
+}
+
 
 /* PayPal */
 form.paypal {
